@@ -52,6 +52,8 @@ def update():
     if balle_y + 5 == 256 :
         balle_y = 128
         balle_x = 128
+        deplacement_vertical = 1
+        deplacement_horizontal = 0
         
     if balle_y == 0 :
         deplacement_vertical = 1
@@ -59,11 +61,11 @@ def update():
     if balle_y == vaisseau_y and vaisseau_x <= balle_x <=vaisseau_x + 32 :
         deplacement_vertical = -1
         
-    if balle_y == vaisseau_y and vaisseau_x+ 32 <= balle_x <=vaisseau_x + 32 + 16 :
+    if balle_y == vaisseau_y and vaisseau_x + 32 <= balle_x <=vaisseau_x + 32 + 16 :
         deplacement_vertical = -1
         deplacement_horizontal = 1
         
-    if balle_y == vaisseau_y and vaisseau_x - 32 <= balle_x <=vaisseau_x - 16 :
+    if balle_y == vaisseau_y and vaisseau_x - 16 <= balle_x <=vaisseau_x :
         deplacement_vertical = 1
         deplacement_horizontal = -1
     
