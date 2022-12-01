@@ -80,23 +80,24 @@ def update():
 def draw():
     """création des objets (30 fois par seconde)"""
     global vaisseau_x, vaisseau_y, balle_y, balle_x,deplacement_vertical, vies
+    if vies > 0 :
     # vide la fenetre
-    pyxel.cls(0)
+        pyxel.cls(0)
 
     #balle 
-    pyxel.circ(balle_x, balle_y, 5, 1)
+        pyxel.circ(balle_x, balle_y, 5, 1)
 
     # plateau 
-    pyxel.rect(vaisseau_x, vaisseau_y, 32, 17, 1)
-    pyxel.tri(vaisseau_x + 32, vaisseau_y, vaisseau_x + 32, vaisseau_y + 16, vaisseau_x + 32 + 16, vaisseau_y + 16, 1)
-    pyxel.tri(vaisseau_x , vaisseau_y, vaisseau_x , vaisseau_y + 16, vaisseau_x - 16, vaisseau_y + 16, 1)
+        pyxel.rect(vaisseau_x, vaisseau_y, 32, 17, 1)
+        pyxel.tri(vaisseau_x + 32, vaisseau_y, vaisseau_x + 32, vaisseau_y + 16, vaisseau_x + 32 + 16, vaisseau_y + 16, 1)
+        pyxel.tri(vaisseau_x , vaisseau_y, vaisseau_x , vaisseau_y + 16, vaisseau_x - 16, vaisseau_y + 16, 1)
 
     #briques
     pyxel.rect(25, 25, 25, 17, 1)
     
     if vies == 0 :
         pyxel.cls(0)
-        pyxel.text(128,128,"PERDU", 1)
+        pyxel.text(125,128,"PERDU", 1)
 
 
 
