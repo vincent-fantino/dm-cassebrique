@@ -12,7 +12,7 @@ vaisseau_y = 180
 balle_x = 50
 balle_y = 50
 deplacement_vertical = 1
-
+deplacement_horizontal = 0
 
 
 def plateau_deplacement(x, y):
@@ -34,23 +34,34 @@ def plateau_deplacement(x, y):
 def update():
     """mise à jour des variables (30 fois par seconde)"""
 
-    global vaisseau_x, vaisseau_y, balle_y, balle_x, deplacement_vertical
+    global vaisseau_x, vaisseau_y, balle_y, balle_x, deplacement_vertical, deplacement_horizontal
      
     # mise à jour de la position du plateau
     vaisseau_x, vaisseau_y = plateau_deplacement(vaisseau_x, vaisseau_y)
     
         
     balle_y = balle_y + deplacement_vertical
+    balle_x = balle_x + deplacement_horizontal
+    
+    if balle_x == 256 : 
+        deplacement_horizontal = -1
+        
+    if balle_x == 0 : 
+        deplacement_horizontal = 1
     
     if balle_y + 5 == 256 :
         balle_y = 128
         balle_x = 128
         
-    if balle_y == 1 :
+    if balle_y == 0 :
         deplacement_vertical = 1
         
-    if balle_y == vaisseau_y and vaisseau_x <= balle_x <=vaisseau_x + 30 :
+    if balle_y == vaisseau_y and vaisseau_x <= balle_x <=vaisseau_x + 32 :
         deplacement_vertical = -1
+        
+    if balle_y == vaisseau_y and vaisseau_x+ 32 <= balle_x <=vaisseau_x + 32 + 16 :
+        deplacement_vertical = -1
+        deplacement_horizontal = 1
     
 # =========================================================
 # == DRAW
