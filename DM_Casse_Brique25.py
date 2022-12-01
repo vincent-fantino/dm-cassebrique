@@ -72,7 +72,7 @@ def update():
         deplacement_horizontal = -1
         
     if vies == 0 :
-        pyxel.text(128,128,'PERDU', 1)
+        pyxel.text(128,128,"PERDU", 1)
     
 # =========================================================
 # == DRAW
