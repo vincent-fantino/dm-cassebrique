@@ -71,7 +71,7 @@ def update():
         deplacement_vertical = -1
         deplacement_horizontal = -1
         
-    if vies = 0 :
+    if vies == 0 :
         pyxel.text(128,128,'PERDU', 1)
     
 # =========================================================
