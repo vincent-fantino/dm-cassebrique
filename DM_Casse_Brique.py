@@ -58,7 +58,7 @@ def update():
     # mise à jour de la position du plateau
     vaisseau_x, vaisseau_y = plateau_deplacement(vaisseau_x, vaisseau_y)
     
-    if Hitbox.collision(balle, plateau) == True :
+    #if Hitbox.collision(balle, plateau) == True :
         
 
 # =========================================================
