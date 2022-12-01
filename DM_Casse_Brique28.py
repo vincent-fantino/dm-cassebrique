@@ -95,6 +95,7 @@ def draw():
     pyxel.rect(25, 25, 25, 17, 1)
     
     if vies == 0 :
+        pyxel.cls(0)
         pyxel.text(128,128,"PERDU", 1)
 
 
