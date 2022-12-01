@@ -6,7 +6,7 @@ pyxel.init(256, 256, title="Nuit du code")
 
 # position initiale du vaisseau
 # (origine des positions : coin haut gauche)
-vaisseau_x = 120
+vaisseau_x = 180
 vaisseau_y = 180
 
 balle_x = 50
@@ -93,11 +93,11 @@ def draw():
         pyxel.tri(vaisseau_x , vaisseau_y, vaisseau_x , vaisseau_y + 16, vaisseau_x - 16, vaisseau_y + 16, 1)
 
     #briques
-    pyxel.rect(25, 25, 25, 17, 1)
+        pyxel.rect(25, 25, 25, 17, 1)
     
     if vies == 0 :
         pyxel.cls(0)
-        pyxel.text(125,128,"PERDU", 1)
+        pyxel.text(120,128,"PERDU", 1)
 
 
 
