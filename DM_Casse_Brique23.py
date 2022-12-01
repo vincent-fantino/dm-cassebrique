@@ -14,6 +14,7 @@ balle_y = 50
 deplacement_vertical = 1
 deplacement_horizontal = 0
 
+vies = 3
 
 def plateau_deplacement(x, y):
     """déplacement avec les touches de directions"""
@@ -54,6 +55,7 @@ def update():
         balle_x = 128
         deplacement_vertical = 1
         deplacement_horizontal = 0
+        vies = vies - 1
         
     if balle_y == 0 :
         deplacement_vertical = 1
@@ -68,6 +70,9 @@ def update():
     if vaisseau_y <= balle_y <= vaisseau_y + 16 and vaisseau_x - 14 <= balle_x <= vaisseau_x :
         deplacement_vertical = -1
         deplacement_horizontal = -1
+        
+    if vies = 0 :
+        pyxel.text(128,128,'PERDU', 1)
     
 # =========================================================
 # == DRAW
