@@ -40,8 +40,8 @@ def update():
     vaisseau_x, vaisseau_y = plateau_deplacement(vaisseau_x, vaisseau_y)
     
         
-    balle_y = balle_y + deplacement_vertical*2
-    balle_x = balle_x + deplacement_horizontal*2
+    balle_y = balle_y + deplacement_vertical
+    balle_x = balle_x + deplacement_horizontal
     
     if balle_x == 256 : 
         deplacement_horizontal = -1
