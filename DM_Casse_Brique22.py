@@ -61,11 +61,11 @@ def update():
     if balle_y == vaisseau_y and vaisseau_x <= balle_x <=vaisseau_x + 32 :
         deplacement_vertical = -1
         
-    if vaisseau_ y <= balle_y <= vaisseau_y + 16  and vaisseau_x + 32 <= balle_x <=vaisseau_x + 32 + 16 :
+    if vaisseau_y <= balle_y <= vaisseau_y + 16  and vaisseau_x + 32 <= balle_x <=vaisseau_x + 32 + 16 :
         deplacement_vertical = -1
         deplacement_horizontal = 1
         
-    if vaisseau_ y <= balle_y <= vaisseau_y + 16 and vaisseau_x - 14 <= balle_x <= vaisseau_x :
+    if vaisseau_y <= balle_y <= vaisseau_y + 16 and vaisseau_x - 14 <= balle_x <= vaisseau_x :
         deplacement_vertical = -1
         deplacement_horizontal = -1
     
