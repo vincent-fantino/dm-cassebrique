@@ -35,7 +35,7 @@ def plateau_deplacement(x, y):
 def update():
     """mise à jour des variables (30 fois par seconde)"""
 
-    global vaisseau_x, vaisseau_y, balle_y, balle_x, deplacement_vertical, deplacement_horizontal
+    global vaisseau_x, vaisseau_y, balle_y, balle_x, deplacement_vertical, deplacement_horizontal, vies
      
     # mise à jour de la position du plateau
     vaisseau_x, vaisseau_y = plateau_deplacement(vaisseau_x, vaisseau_y)
