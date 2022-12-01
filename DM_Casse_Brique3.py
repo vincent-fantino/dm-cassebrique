@@ -15,6 +15,7 @@ vaisseau_y = 180
 
 balle_x = 50
 balle_y = 50
+deplacement = 1
 
 class Point2D:
     def __init__(self, x, y) -> None:
@@ -60,7 +61,12 @@ def update():
     
     #if Hitbox.collision(balle, plateau) == True :
         
-
+    balle_y = balle_y + deplacement
+    
+    if balle_y + 5 = 256 :
+        balle_y = 128
+        balle_x = 128
+        
 # =========================================================
 # == DRAW
 # =========================================================
