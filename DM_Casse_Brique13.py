@@ -46,10 +46,10 @@ def update():
         balle_y = 128
         balle_x = 128
         
-    if balle_y == 0 :
+    if balle_y == 1 :
         deplacement_vertical = 1
         
-    if balle_y == vaisseau_y and vaisseau_x <= balle_x <=vaisseau_x + 32 :
+    if balle_y == vaisseau_y and vaisseau_x <= balle_x <=vaisseau_x + 30 :
         deplacement_vertical = -1
     
 # =========================================================
