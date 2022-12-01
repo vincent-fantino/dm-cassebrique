@@ -1,7 +1,3 @@
-# NOTE : Erreur ligne 61, if incomplet 
-
-
-from time import monotonic
 import pyxel
 
 # taille de la fenetre 128x128 pixels
@@ -94,29 +90,3 @@ def draw():
 
 
 pyxel.run(update, draw)
-
-#Exemple de class hitbox :
-
-class Point2D:
-    def __init__(self, x, y) -> None:
-        self.x = x
-        self.y = y
-
-class Hitbox:
-    def __init__(self, p1 : Point2D, p2 : Point2D) -> None:
-        self.p1 = p1
-        self.p2 = p2
-    @classmethod
-    def collision(cls, rect1, rect2) -> bool:
-        return rect2.p1.y <= rect1.p2.y and rect1.p1.y <= rect2.p2.y or rect2.p1.x <= rect1.p2.x and rect2.p1.x <= rect1.p2.x
-
-M = Point2D(1, 3)
-N = Point2D(3, 5)
-O = Point2D(2, 4)
-P =Point2D(4, 6)
-
-MN = Hitbox(M, N)
-OP = Hitbox(O, P)
-
-print(M)
-print(N)
