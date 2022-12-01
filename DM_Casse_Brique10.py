@@ -13,22 +13,6 @@ balle_x = 50
 balle_y = 50
 deplacement_vertical = 1
 
-class Point2D:
-    def __init__(self, x, y) -> None:
-        self.x = x
-        self.y = y
-
-class Hitbox:
-    def __init__(self, p1 : Point2D, p2 : Point2D) -> None:
-        self.p1 = p1
-        self.p2 = p2
-    @classmethod
-    def collision(cls, rect1, rect2) -> bool:
-        return (rect1.p1.x <= rect2.p2.x and rect2.p1.x <= rect1.p2.x) or (rect1.p1.y <= rect2.p2.y and rect2.p1.y <= rect1.p2.y)
-
-balle = Hitbox(Point2D(balle_x, balle_y), Point2D(balle_x + 10, balle_y + 10))
-plateau = Hitbox(Point2D(vaisseau_x, vaisseau_y), Point2D(vaisseau_x + 32, vaisseau_y + 17))
-
 
 
 def plateau_deplacement(x, y):
@@ -50,12 +34,11 @@ def plateau_deplacement(x, y):
 def update():
     """mise à jour des variables (30 fois par seconde)"""
 
-    global vaisseau_x, vaisseau_y, balle_y, balle_x
+    global vaisseau_x, vaisseau_y, balle_y, balle_x, deplacement_vertical
      
     # mise à jour de la position du plateau
     vaisseau_x, vaisseau_y = plateau_deplacement(vaisseau_x, vaisseau_y)
     
-    #if Hitbox.collision(balle, plateau) == True :
         
     balle_y = balle_y + deplacement_vertical
     
@@ -70,7 +53,7 @@ def update():
 # =========================================================
 def draw():
     """création des objets (30 fois par seconde)"""
-
+    global vaisseau_x, vaisseau_y, balle_y, balle_x,deplacement_vertical
     # vide la fenetre
     pyxel.cls(0)
 
