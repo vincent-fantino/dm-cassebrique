@@ -16,6 +16,7 @@ deplacement_vertical = 1
 deplacement_horizontal = random.randint(-1,1)
 
 vies = 3
+
 vies_brique_1 = 2
 vies_brique_2 = 3
 vies_brique_3 = 1
@@ -91,15 +92,20 @@ def draw():
 
     global vaisseau_x, vaisseau_y, balle_y, balle_x, deplacement_vertical, vies, vies_brique_1, vies_brique_2, vies_brique_3, deplacement_horizontal
     
-    pyxel.text(128,200,"salut", 1)
-    
-    #str(vies_brique_2
-    
     if vies > 0 :
+        
     # vide la fenetre
         pyxel.cls(0)
-
-    #balle 
+        
+    # affichage des vies de la brique
+        pyxel.text(5,220,"brique de gauche "+str(vies_brique_1), 7)
+        pyxel.text(96,220,"brique du milieu "+str(vies_brique_2), 7)
+        pyxel.text(180,220,"brique de droite "+str(vies_brique_3), 7)
+        
+    # affichage des vies 
+        pyxel.text(128,240,"brique du milieu "+str(vies), 7)
+        
+    # balle 
         pyxel.circ(balle_x, balle_y, 1, 8)
 
     # plateau 
@@ -107,7 +113,7 @@ def draw():
         pyxel.tri(vaisseau_x + 32, vaisseau_y, vaisseau_x + 32, vaisseau_y + 16, vaisseau_x + 32 + 16, vaisseau_y + 16, 6)
         pyxel.tri(vaisseau_x , vaisseau_y, vaisseau_x , vaisseau_y + 16, vaisseau_x - 16, vaisseau_y + 16, 6)
 
-    #briques
+    # briques
         #brique de gauche 
         if balle_y == 25 and 64-13 < balle_x < 64-13+26 and vies_brique_1 > 0 :
             vies_brique_1 = vies_brique_1 - 1
@@ -172,7 +178,7 @@ def draw():
             deplacement_horizontal = - deplacement_horizontal
             print(vies_brique_3)
 
-        #affichage des briques 
+        # affichage des briques 
         if vies_brique_1 > 0 : 
             pyxel.rect(64-13, 25, 25, 17, 10) 
         
