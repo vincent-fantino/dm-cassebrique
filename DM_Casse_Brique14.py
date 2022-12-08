@@ -119,24 +119,35 @@ def draw():
             
         elif 25 < balle_y < 25+17 and balle_x == 64-13+26 and vies_brique_1 > 0 :
             vies_brique_1 = vies_brique_1 - 1
-            deplacement_horizontal = -deplacement_horizontal
+            deplacement_horizontal = - deplacement_horizontal
+            print(vies_brique_1)
+            
+        elif 25 < balle_y < 25+17 and balle_x == 64-13 and vies_brique_1 > 0 :
+            vies_brique_1 = vies_brique_1 - 1
+            deplacement_horizontal = - deplacement_horizontal
+            print(vies_brique_1)
+        
 
         #brique du milieu
         if balle_y == 25 and 128-13 <= balle_x <= 128-13+26 and vies_brique_2 > 0 :
             vies_brique_2 = vies_brique_2 - 1
             deplacement_vertical = -1 #-1
+            print(vies_brique_2)
 
         elif balle_y == 25+17 and 128-13 < balle_x < 128-13+26 and vies_brique_2 > 0 :
             vies_brique_2 = vies_brique_2 - 1
             deplacement_vertical = 1 #1
+            print(vies_brique_2)
             
         elif 25 < balle_y < 25+17 and balle_x == 128-13+26 and vies_brique_2 > 0 :
             vies_brique_2 = vies_brique_2 - 1
             deplacement_horizontal = - deplacement_horizontal
+            print(vies_brique_2)
             
         elif 25 < balle_y < 25+17 and balle_x == 128-13 and vies_brique_2 > 0 :
             vies_brique_2 = vies_brique_2 - 1
             deplacement_horizontal = - deplacement_horizontal
+            print(vies_brique_2)
 
         #brique de droite
         if balle_y == 25 and 192-13 < balle_x < 192-13+26 and vies_brique_3 > 0 :
@@ -146,6 +157,16 @@ def draw():
         elif balle_y == 25+17 and 192-13 < balle_x < 192-13+26 and vies_brique_3 > 0 :
             vies_brique_3 = vies_brique_3 - 1
             deplacement_vertical = 1 #1
+            
+        elif 25 < balle_y < 25+17 and balle_x == 192-13+26 and vies_brique_3 > 0 :
+            vies_brique_3 = vies_brique_3 - 1
+            deplacement_horizontal = - deplacement_horizontal
+            print(vies_brique_3)
+            
+        elif 25 < balle_y < 25+17 and balle_x == 192-13 and vies_brique_3 > 0 :
+            vies_brique_3 = vies_brique_3 - 1
+            deplacement_horizontal = - deplacement_horizontal
+            print(vies_brique_3)
 
         #affichage des briques 
         if vies_brique_1 > 0 : 
