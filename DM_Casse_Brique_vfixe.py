@@ -103,7 +103,7 @@ def draw():
         pyxel.text(180,220,"brique de droite "+str(vies_brique_3), 7)
         
     # affichage des vies 
-        pyxel.text(128,240,"vies "+str(vies), 7)
+        pyxel.text(120,240,"vies "+str(vies), 7)
         
     # balle 
         pyxel.circ(balle_x, balle_y, 1, 8)
@@ -201,3 +201,4 @@ def draw():
 
 
 pyxel.run(update, draw)
+
