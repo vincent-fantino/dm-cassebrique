@@ -91,9 +91,9 @@ def draw():
 
     global vaisseau_x, vaisseau_y, balle_y, balle_x, deplacement_vertical, vies, vies_brique_1, vies_brique_2, vies_brique_3, deplacement_horizontal
     
-    pyxel.text(128,200,"str(vies_brique_2", 1)
+    pyxel.text(128,200,"salut", 1)
     
-    #str(vies_brique_2)
+    #str(vies_brique_2
     
     if vies > 0 :
     # vide la fenetre
@@ -117,7 +117,8 @@ def draw():
             vies_brique_1 = vies_brique_1 - 1
             deplacement_vertical = 1 #1
             
-        if 25 < balle_y < 25+17 and balle_x == 64-13+26 and vies_brique_1 > 0 :
+        elif 25 < balle_y < 25+17 and balle_x == 64-13+26 and vies_brique_1 > 0 :
+            vies_brique_1 = vies_brique_1 - 1
             deplacement_horizontal = -deplacement_horizontal
 
         #brique du milieu
@@ -129,8 +130,13 @@ def draw():
             vies_brique_2 = vies_brique_2 - 1
             deplacement_vertical = 1 #1
             
-        if 25 < balle_y < 25+17 and balle_x == 128-13+26 and vies_brique_2 > 0 :
-            deplacement_horizontal = -deplacement_horizontal
+        elif 25 < balle_y < 25+17 and balle_x == 128-13+26 and vies_brique_2 > 0 :
+            vies_brique_2 = vies_brique_2 - 1
+            deplacement_horizontal = - deplacement_horizontal
+            
+        elif 25 < balle_y < 25+17 and balle_x == 128-13 and vies_brique_2 > 0 :
+            vies_brique_2 = vies_brique_2 - 1
+            deplacement_horizontal = - deplacement_horizontal
 
         #brique de droite
         if balle_y == 25 and 192-13 < balle_x < 192-13+26 and vies_brique_3 > 0 :
