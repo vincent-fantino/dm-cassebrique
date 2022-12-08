@@ -114,7 +114,7 @@ def draw():
         elif balle_y == 25+17 and 64-13 < balle_x < 64-13+26 and vies_brique_1 > 0 :
             vies_brique_1 = vies_brique_1 - 1
             deplacement_vertical = 1 #1
-        if 25 < balle_y < 25+17 and 64-13 balle_x == 64-13+26 and vies_brique_1 > 0 :
+        if 25 < balle_y < 25+17 and balle_x == 64-13+26 and vies_brique_1 > 0 :
             deplacement_horizontal = -deplacement_horizontal
 
         #brique du milieu
