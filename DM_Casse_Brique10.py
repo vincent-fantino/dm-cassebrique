@@ -1,6 +1,6 @@
 import pyxel, random
 
-# taille de la fenetre 128x128 pixels
+# taille de la fenetre 256*256 pixels
 # ne pas modifier
 pyxel.init(256, 256, title="DM_NSI")
 
@@ -91,7 +91,7 @@ def draw():
 
     global vaisseau_x, vaisseau_y, balle_y, balle_x, deplacement_vertical, vies, vies_brique_1, vies_brique_2, vies_brique_3, deplacement_horizontal
     
-    pyxel.text(128,250,str(vies_brique_1), 1)
+    pyxel.text(128,200,str(vies_brique_1), 1)
     
     if vies > 0 :
     # vide la fenetre
