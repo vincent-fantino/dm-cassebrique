@@ -112,10 +112,12 @@ def draw():
         if balle_y == 25 and 64-13 < balle_x < 64-13+26 and vies_brique_1 > 0 :
             vies_brique_1 = vies_brique_1 - 1
             deplacement_vertical = -1 #-1
+            print(vies_brique_1)
 
         elif balle_y == 25+17 and 64-13 < balle_x < 64-13+26 and vies_brique_1 > 0 :
             vies_brique_1 = vies_brique_1 - 1
             deplacement_vertical = 1 #1
+            print(vies_brique_1)
             
         elif 25 < balle_y < 25+17 and balle_x == 64-13+26 and vies_brique_1 > 0 :
             vies_brique_1 = vies_brique_1 - 1
@@ -153,10 +155,12 @@ def draw():
         if balle_y == 25 and 192-13 < balle_x < 192-13+26 and vies_brique_3 > 0 :
             vies_brique_3 = vies_brique_3 - 1
             deplacement_vertical = -1 #-1
+            print(vies_brique_3)
 
         elif balle_y == 25+17 and 192-13 < balle_x < 192-13+26 and vies_brique_3 > 0 :
             vies_brique_3 = vies_brique_3 - 1
             deplacement_vertical = 1 #1
+            print(vies_brique_3)
             
         elif 25 < balle_y < 25+17 and balle_x == 192-13+26 and vies_brique_3 > 0 :
             vies_brique_3 = vies_brique_3 - 1
