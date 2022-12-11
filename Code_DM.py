@@ -135,11 +135,11 @@ def draw():
             
         elif 24 <= balle_y <= 25+18 and 64-13+25 <= balle_x <= 64-13+27 and vies_brique_1 > 0 :
             vies_brique_1 = vies_brique_1 - 1
-            deplacement_horizontal = - deplacement_horizontal*vitesse
+            deplacement_horizontal = - deplacement_horizontal
             
         elif 25 < balle_y < 25+17 and 64-13 <= balle_x <= 64-11 and vies_brique_1 > 0 :
             vies_brique_1 = vies_brique_1 - 1
-            deplacement_horizontal = - deplacement_horizontal*vitesse
+            deplacement_horizontal = - deplacement_horizontal
         
 
         # brique du milieu
@@ -153,11 +153,11 @@ def draw():
             
         elif 25 <= balle_y <= 25+17 and 128-13+25 <= balle_x <= 128-13+27 and vies_brique_2 > 0 :
             vies_brique_2 = vies_brique_2 - 1
-            deplacement_horizontal = - deplacement_horizontal*vitesse
+            deplacement_horizontal = - deplacement_horizontal
             
         elif 25 < balle_y < 25+17 and  128-14 <= balle_x <= 128-12 and vies_brique_2 > 0 :
             vies_brique_2 = vies_brique_2 - 1
-            deplacement_horizontal = - deplacement_horizontal*vitesse
+            deplacement_horizontal = - deplacement_horizontal
 
         # brique de droite
         if 24 <= balle_y <= 26 and 192-13 < balle_x < 192-13+26 and vies_brique_3 > 0 :
@@ -170,11 +170,11 @@ def draw():
             
         elif 25 <= balle_y <= 25+17 and balle_x == 192-13+26 and vies_brique_3 > 0 :
             vies_brique_3 = vies_brique_3 - 1
-            deplacement_horizontal = - deplacement_horizontal*vitesse
+            deplacement_horizontal = - deplacement_horizontal
             
         elif 25 < balle_y < 25+17 and balle_x == 192-13 and vies_brique_3 > 0 :
             vies_brique_3 = vies_brique_3 - 1
-            deplacement_horizontal = - deplacement_horizontal*vitesse
+            deplacement_horizontal = - deplacement_horizontal
 
         # affichage des briques 
         if vies_brique_1 > 0 : 
@@ -182,8 +182,6 @@ def draw():
         if vies_brique_1 == 0 and bd1 == 0:
             bd1 = 1
             vitesse = vitesse + 1
-            deplacement_horizontal = deplacement_horizontal*vitesse
-            deplacement_vertical = deplacement_vertical*vitesse
             print("vitesse +")
         
         if vies_brique_2 > 0 :
@@ -192,8 +190,6 @@ def draw():
         if vies_brique_2 == 0 and bd2 == 0:
             bd2 = 1
             vitesse = vitesse + 1
-            deplacement_horizontal = deplacement_horizontal*vitesse
-            deplacement_vertical = deplacement_vertical*vitesse
             print("vitesse +")
 
         if vies_brique_3 > 0 : 
@@ -202,8 +198,6 @@ def draw():
         if vies_brique_3 == 0 and bd3 == 0 :
             bd3 = 1
             vitesse = vitesse + 1
-            deplacement_horizontal = deplacement_horizontal*vitesse
-            deplacement_vertical = deplacement_vertical*vitesse
             print("vitesse +")
     # fins de jeu
     if vies == 0 :
